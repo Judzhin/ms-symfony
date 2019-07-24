@@ -14,8 +14,9 @@
         "symfony/yaml": "4.3.*"
     },
     "require-dev": {
-        "symfony/web-server-bundle": "4.3.*",
-        "symfony/maker-bundle": "^1.12"
+        "msbios/msbios": "^1.0",
+        "symfony/maker-bundle": "^1.12",
+        "symfony/web-server-bundle": "4.3.*"
     },
     "config": {
         "preferred-install": {
