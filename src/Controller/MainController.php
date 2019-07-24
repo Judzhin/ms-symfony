@@ -7,6 +7,7 @@ namespace App\Controller;
 
 use App\Entity\Note;
 use App\Form\NoteType;
+use App\Service\HelloService;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\FormInterface;
@@ -23,9 +24,10 @@ class MainController extends AbstractController
      * @Route("/", name="main_index")
      *
      * @param Request $request
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @param HelloService $helloService
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
-    public function index(Request $request)
+    public function index(Request $request, HelloService $helloService)
     {
         /** @var Note $note */
         $note = new Note;
@@ -48,6 +50,7 @@ class MainController extends AbstractController
 
         return $this->render('main/index.html.twig', [
             'controller_name' => self::class,
+            'helloService' => $helloService,
             'form' => $form->createView(),
             'notes' => $notes
         ]);
