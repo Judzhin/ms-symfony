@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\NoteRepository")
@@ -18,12 +19,22 @@ class Note
     private $id;
 
     /**
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *     min = 4,
+     *     max = 100,
+     *     minMessage="{{value}} - этого слишком мало, должно быть {{limit}}",
+     *     maxMessage="{{value}} - этого слишком много, должно быть {{limit}}",
+     * )
+     *
      * @ORM\Column(type="string", length=100)
      */
     private $title;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
+     *
+     * @ORM\Column(type="string", length=200)
      */
     private $description;
 
