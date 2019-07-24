@@ -49,6 +49,15 @@ class Note
     private $created;
 
     /**
+     * @return Note
+     */
+    public static function factory(): self
+    {
+        return (new static())
+            ->setCreated(new \DateTime);
+    }
+
+    /**
      * @return int|null
      */
     public function getId(): ?int
@@ -71,7 +80,6 @@ class Note
     public function setTitle(string $title): self
     {
         $this->title = $title;
-
         return $this;
     }
 
@@ -90,7 +98,6 @@ class Note
     public function setDescription(string $description): self
     {
         $this->description = $description;
-
         return $this;
     }
 
@@ -109,7 +116,6 @@ class Note
     public function setStatus(int $status): self
     {
         $this->status = $status;
-
         return $this;
     }
 
@@ -128,7 +134,6 @@ class Note
     public function setCreated(\DateTimeInterface $created): self
     {
         $this->created = $created;
-
         return $this;
     }
 }
