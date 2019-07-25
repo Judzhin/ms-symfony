@@ -510,7 +510,7 @@
       <updated>1564052076600</updated>
       <workItem from="1563958361589" duration="11876000" />
       <workItem from="1564041917446" duration="4028000" />
-      <workItem from="1564052077059" duration="1128000" />
+      <workItem from="1564052077059" duration="1380000" />
     </task>
     <task id="LOCAL-00002">
       <branch name="origin/version4" repository="$PROJECT_DIR$" original="true" />
@@ -544,7 +544,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17065000" />
+    <option name="totallyTimeSpent" value="17317000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="-2" width="1920" height="1082" extended-state="6" />
